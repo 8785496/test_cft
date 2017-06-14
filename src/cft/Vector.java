@@ -5,17 +5,24 @@ import java.util.ArrayList;
 
 public class Vector<T> {
     private Object[] data;
+    private int length;
 
-    public Vector(int size) {
-        data = new Object[size];
+    public Vector(int capacity) {
+        data = new Object[capacity];
+        length = 0;
     }
 
     public void sort() {
 
     }
 
-    void set(int index, T value) {
-        data[index] = value;
+    void add(T value) throws Exception {
+        if (length < data.length) {
+            data[length] = value;
+            length++;
+        } else {
+            throw new Exception("boundary");
+        }
     }
 
     T get(int index) {
