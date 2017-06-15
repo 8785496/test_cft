@@ -18,8 +18,10 @@
 Запуск из командной строки (cmd.exe или bash):
 
 ```no-highlight
-java -jar test_cft.jar <type> <order>
-где тип данных (type):  
+java -jar test_cft.jar <filein> <fileout> <type> <order>
+где filein название входного файла
+fileout название выходного файла
+тип данных (type):
     -s строки  
     -i целые числа  
 порядок сортировки (order):
